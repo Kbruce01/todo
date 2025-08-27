@@ -54,6 +54,7 @@
   {#each todos as todo, i}
     <li class="todo-item {todo.completed ? 'completed' : ''}">
       <input type="checkbox" checked={todo.completed} on:change={() => toggleComplete(i)} />
+      {todo.text}
       <button class="delete-btn" on:click={() => deleteTodo(i)} title="Delete">🗑️</button>
     </li>
   {/each}
